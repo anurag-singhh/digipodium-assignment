@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-image: url('');
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+</style>
+<body>
+    <h1>BOOK YOUR SHOW</h1>
+    <img src="Screenshot 2023-07-08 180100.png">
+    <nav>
+        
+         <a href="#">Movies</a>
+         <a href="#">Stream</a>
+         <a href="#">Events</a>
+         <a href="#">Activities</a>
+           
+    </nav>
+    <br>
+    <hr>
+    <h3>Personal Information</h3>
+    <form>
+        <label for="name">Customer Name</label>
+        <input type="text" id="name">
+        <br>
+        <br>
+        <label for="ph_no">Mobile Number</label>
+        <input type="tel">
+        <br>
+        <br>
+        <label for="email">Email</label>
+        <input type="email">
+        <br>
+        <br>
+        <label for="">Select State</label>
+        <select>
+            <option>Uttar Pradesh</option>
+            <option>Delhi</option>
+            <option>Madhya Pradesh</option>
+            <option>Goa</option>
+            <option>Rajasthan</option>
+        </select>
+        <br>
+        <br>
+        <label for=""> Select City</label>
+        <input type="text" list="City">
+        <datalist id="City">
+            <option>Lucknow</option>
+            <option>Mumbai</option>
+            <option>Kanpur</option>
+            <option>Ahmedabad</option>
+            <option>Jaipur</option>
+        </datalist>
+       
+    </form>
+    <hr>
+    <h3>Movie Ticket Reservation</h3>
+    <form>
+        <label for="movie_name" id="mov_name">Select Movie</label>   
+        <select>
+            <option>Mission Impossible</option>
+            <option>1920: Horrors of the Heart</option>
+            <option>Adipurush</option>
+            <option>The Flash</option>
+            <option>Neeyat</option>
+        </select> 
+        <br> 
+        <br>
+        <label for="no_of_ticket">No. of Ticket</label>
+        <input type="text">
+        <br>
+        <br>
+        <label for="showdate">Show Date</label>
+        <input type="date"> 
+        <br>
+        <br>
+        <label for="show_time">Select Show time</label>
+        <select>
+            <option>09:00 AM</option>
+            <option>12:00 PM</option>
+            <option>03:00 PM</option>
+            <option>09:00 PM</option>
+        </select>
+        <br>
+        <br>
+        <label for="row">Select Seating level</label>
+        <select>
+            <option>Mezzanine</option>
+            <option>Balcony</option>
+            <option>Orchestra</option>
+       </select>
+       <label for="ref">Refreshments</label>
+       <select>
+            <option>None</option>
+            <option>Coffee</option>
+            <option>Pop Corn</option>
+       </select>
+        <br>
+
+    </form>
+    <hr>
+    <h3>Payment Details</h3>
+    <form>
+        <label for="payment">Payment Type</label>
+        <select>
+            <option>UPI</option>
+            <option>Credit card</option>
+            <option>Debit Card</option>
+        </select>
+        <br>
+        <br>
+        <button type="button">Book Now</button>
+    </form>
+
+</body>
+</html>
