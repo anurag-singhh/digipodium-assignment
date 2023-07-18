@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        header{
+            background-image:linear-gradient(0deg, #000000a0, #000000a6), url('data:image/jpeg;base64,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');
+            background-size: cover;
+            padding: 200px 0;
+            background-position: center;
+            color: white;
+            background-attachment: fixed;
+        }
+        .card{
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+        }
+        .card .card-body{
+            transform: translateZ(50px);
+        }
+    </style>
+  </head>
+  <body>
+
+    <header>
+        <div class="container py-5">
+            <p class="display-4 fw-bold text-center page-title">Best Headphone Offers</p>
+
+            <div class="input-group mt-5 search-input">
+                <input type="text" class="form-control form-control-lg">
+                <button class="btn btn-primary"><i class="fa-regular fa-magnifying-glass fa-beat-fade"></i> Search</button>
+            </div>
+        </div>
+
+
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://m.media-amazon.com/images/I/61edVIWAN1L._SX522_.jpg" alt="">
+                    <div class="card-body">
+                        <p class="fw-bold">boat</p>
+                        <h3>Rockerz 450 Pro</h3>
+                        <p>
+                            <i class="fa-solid fa-star text-warning"> 4.5 Stars (1,345 Ratings)
+
+                            </i>
+                        </p>
+
+
+                        <h2 class="text-end">₹ 1698</h2>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary">Buy Now</button>
+                        <button class="btn btn-danger"> <i class="fa-solid fa-cart-shopping fa-beat-fade"></i> Add To Cart</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://m.media-amazon.com/images/I/61edVIWAN1L._SX522_.jpg" alt="">
+                    <div class="card-body">
+                        <p class="fw-bold">boat</p>
+                        <h3>Rockerz 450 Pro</h3>
+                        <p>
+                            <i class="fa-solid fa-star text-warning"> 4.5 Stars (1,345 Ratings)
+
+                            </i>
+                        </p>
+
+
+                        <h2 class="text-end">₹ 1698</h2>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary">Buy Now</button>
+                        <button class="btn btn-danger"> <i class="fa-solid fa-cart-shopping fa-beat-fade"></i> Add To Cart</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://m.media-amazon.com/images/I/61edVIWAN1L._SX522_.jpg" alt="">
+                    <div class="card-body">
+                        <p class="fw-bold">boat</p>
+                        <h3>Rockerz 450 Pro</h3>
+                        <p>
+                            <i class="fa-solid fa-star text-warning"> 4.5 Stars (1,345 Ratings)
+
+                            </i>
+                        </p>
+
+
+                        <h2 class="text-end">₹ 1698</h2>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary">Buy Now</button>
+                        <button class="btn btn-danger"> <i class="fa-solid fa-cart-shopping fa-beat-fade"></i> Add To Cart</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://m.media-amazon.com/images/I/61edVIWAN1L._SX522_.jpg" alt="">
+                    <div class="card-body">
+                        <p class="fw-bold">boat</p>
+                        <h3>Rockerz 450 Pro</h3>
+                        <p>
+                            <i class="fa-solid fa-star text-warning"> 4.5 Stars (1,345 Ratings)
+
+                            </i>
+                        </p>
+
+
+                        <h2 class="text-end">₹ 1698</h2>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary">Buy Now</button>
+                        <button class="btn btn-danger"> <i class="fa-solid fa-cart-shopping fa-beat-fade"></i> Add To Cart</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img class="card-img-top" src="https://m.media-amazon.com/images/I/61edVIWAN1L._SX522_.jpg" alt="">
+                <div class="card-body">
+                    <p class="fw-bold">boat</p>
+                    <h3>Rockerz 450 Pro</h3>
+                    <p>
+                        <i class="fa-solid fa-star text-warning"> 4.5 Stars (1,345 Ratings)
+
+                        </i>
+                    </p>
+
+
+                    <h2 class="text-end">₹ 1698</h2>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary">Buy Now</button>
+                    <button class="btn btn-danger"> <i class="fa-solid fa-cart-shopping fa-beat-fade"></i> Add To Cart</button>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+
+   
+
+            
+
+        
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal().reveal('.page-title',{
+          delay: 500,
+          origin: 'bottom',
+          distance: '50pxpx',
+          scale: 0.5
+
+        });
+        ScrollReveal().reveal('.search-input',{
+            delay: 200,
+            origin: 'left',
+          distance: '100px',
+          scale: 0.5
+        });
+        ScrollReveal().reveal('.card',{
+            delay: 200,
+            origin: 'bottom',
+            distance: '100px',
+            interval: 200,
+            reset: true
+
+        });
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll('.card'),{
+            max: 5,
+            speed: 400,
+            scale: 1.1,
+            glare: true
+        });
+    </script>
+  
+</body>
+</html>
