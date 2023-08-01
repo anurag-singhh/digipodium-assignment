@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>home page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+          header{
+            background-image:linear-gradient(0deg, #000000a0, #000000a6), url('https://images.unsplash.com/photo-1479660095429-2cf4e1360472?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');
+            background-size: cover;
+            padding: 200px 0;
+            background-position: center;
+            color: white;
+            background-attachment : fixed;
+        }
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.80),rgba(0, 0, 0, 0.60)),url(background2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width:20%;
+    cursor: pointer;
+    }
+    .navbar ul li{
+        list-style: none;
+        display: inline-block;
+        margin: 0 20px;
+        position: relative;
+    }
+    .navbar ul li a{
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+    }
+    .navbar ul li::after{
+        content: '';
+        height: 3px;
+        width: 0%;
+        background: #0a9ae2dd;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.5s;
+    }
+    .navbar ul li:hover::after{
+        width: 100%;
+    }
+    .log{
+        background:  #0a9ae2dd;
+        color: #fff;
+        border-color: #0a9ae2dd;
+        transition-property: all;
+        transition-duration: 300ms;
+
+    }
+    .log:hover{
+        transform: scale(1.1) translateY(5px);
+        box-shadow: 0px -10px 10px -5px #00000058;
+    }
+    .content{
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        color:#fff;
+    }
+    
+    
+    #h2{
+        font-size: 70px;
+        margin-top: 20px;
+
+    }
+    .content p{
+        margin-top: 20px auto;
+        font-weight: 100;
+        line-height: 30px;
+
+    }
+   
+
+   
+
+    
+
+   
+
+    </style>
+  
+</head>
+  <body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="https://s2.bunnycdn.ru/assets/sites/anix/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Genres</a></li>
+                <li><a href="#">Types</a></li>
+                <li><a href="#">Updated</a></li>
+                <li><a href="#">Added</a></li>
+                <li><a href="#">Ongoing</a></li>
+                <li><a href="#">Upcoming</a></li>
+                <li><a href="#">Random</a></li>
+                <button class="log" primary>Login</button>
+            </ul>
+        </div>
+        <header>
+            <div class="container py-5">
+    
+                <div class="input-group mt-5 ">
+                    
+                    <input type="text" class="form-control form-control-lg">
+                    <button class="btn log"> Filter</button>
+                </div>
+            </div>
+        </header>
+      
+        <div class="content">
+            <h2><b>Best Anime Site</b><h2>
+            <p>Top Search: One Piece, Zom 100: Bucket List of the....Jujutsu Kaisen 2nd Season, <br>
+             Naruto Shippuden, Black Clover, Naruto, 
+            Jujutsu Kaisen(TV),<br> Bleach, Boruto: Naruto Next Generations.. </p><br>
+
+           
+                
+            
+        </div>
+
+    </div>
+
+        
+        
+
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
