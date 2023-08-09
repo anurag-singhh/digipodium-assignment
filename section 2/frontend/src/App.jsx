@@ -5,6 +5,9 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 import Navbar from './components/Navbar';
 import EventHandling from './components/EventHandling';
+import StateManagement from './components/StateManagement';
+import TodoList from './components/TodoList';
+import ProductList from './components/ProductList';
 
 
 function App() {
@@ -24,6 +27,9 @@ function App() {
         <Route element={<Signup/> } path ='signup' /> 
         <Route element={<Login/> } path ='login' /> 
         <Route element={<EventHandling /> } path ='event' /> 
+        <Route element={<StateManagement /> } path ='statemanagement' /> 
+        <Route element={<TodoList /> } path ='todo' /> 
+        <Route element={<ProductList /> } path ='list' /> 
 
       </Routes>
       </BrowserRouter>

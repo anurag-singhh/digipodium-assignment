@@ -41,6 +41,21 @@ const Navbar = () => {
             Event Handling
           </NavLink>
         </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/statemanagement">
+            State Management
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/todo">
+            Todo List
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/list">
+            Product List
+          </NavLink>
+        </li>
         
       </ul>
       <form className="d-flex" role="search">
@@ -61,4 +76,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar;
