@@ -47,7 +47,7 @@ const ProductList = () => {
   };
 
   return (
-    <div>
+    <div className="list-back">
       <header className="bg-body-secondary">
         <div className="container py-5">
           <h1 className="text-center">Product List Page</h1>

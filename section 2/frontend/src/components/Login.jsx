@@ -1,17 +1,26 @@
 import { useFormik } from "formik";
 import React from "react";
+import * as Yup from 'yup';
+
+const LoginSchema = Yup.object().shape({
+  email: Yup.string().email('Invalid email').required('Email is Required'),
+  password: Yup.string().required('Password is Required')
+});
 
 const Login = () => {
 
-  //Initializing formik
-  const loginForm =useFormik({
+  // Initializing formik
+  const loginForm = useFormik({
     initialValues: {
       email : "",
       password : ""
     },
-    onsubmit : ( values ) => {console.log(values);
-    //write code to submit form to server
-  }
+    onSubmit : ( values ) => {
+      console.log(values);
+      // write code to submit form to server
+    },
+
+    validationSchema : LoginSchema
   });
   return (
     <div>
