@@ -8,15 +8,25 @@ import EventHandling from './components/EventHandling';
 import StateManagement from './components/StateManagement';
 import TodoList from './components/TodoList';
 import ProductList from './components/ProductList';
+import ManageUser from './components/ManageUser';
+import { Toaster } from 'react-hot-toast';
+import UpdateUser from './components/UpdateUser';
+import { AnimatePresence } from 'framer-motion';
+import { UserProvider } from './UserContext';
+import Profile from './components/Profile';
 
 
 function App() {
   return (
     <div>
+      <Toaster position='top-right' />
       <BrowserRouter>
+       <UserProvider>
+        <AnimatePresence>
       {/* <Link to='/home'>Home</Link>
        <Link to='/signup'>Signup</Link>
   <Link to='/login'>Login</Link>*/}
+
 
        <Navbar />
        
@@ -30,8 +40,14 @@ function App() {
         <Route element={<StateManagement /> } path ='statemanagement' /> 
         <Route element={<TodoList /> } path ='todo' /> 
         <Route element={<ProductList /> } path ='list' /> 
+        <Route element={<ManageUser /> } path ='manageuser' /> 
+        <Route element={ <UserAuth> <Profile /> </UserAuth> } path="profile" />
+        <Route element={<UpdateUser /> } path ='updateuser/:id' /> 
+        
 
       </Routes>
+     </AnimatePresence> 
+     </UserProvider>
       </BrowserRouter>
     </div>
     

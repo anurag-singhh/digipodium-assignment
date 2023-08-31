@@ -1,7 +1,52 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import useUserContext from '../UserContext';
+
 
 const Navbar = () => {
+  const [currentUser, setCurrentUser] = useState(
+    JSON.parse(sessionStorage.getItem("user"))
+  );
+
+  const { loggedIn, logout } = useUserContext();
+
+  const showLoginOptions = () => {
+    if (currentUser !== null || loggedIn ) {
+      return (
+        <>
+          <li className="nav-item">
+            <button className="btn btn-danger" onClick={logout} >Logout</button>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/profile">
+              Profile
+            </NavLink>    
+          </li>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/signup">
+              Signup
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/login">
+              Login
+            </NavLink>
+          </li>
+        </>
+      );
+    }
+  };
+
+         
+     
+
+
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid">
@@ -56,6 +101,12 @@ const Navbar = () => {
             Product List
           </NavLink>
         </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/manageuser">
+            Manage User
+          </NavLink>
+        </li>
+        {showLoginOptions}
         
       </ul>
       <form className="d-flex" role="search">
@@ -73,7 +124,7 @@ const Navbar = () => {
   </div>
 </nav>
 
-  )
-}
+  );
+};
 
 export default Navbar;
